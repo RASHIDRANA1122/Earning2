@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Money Earning System</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div id="login-area">
+    <h2>Login with Gmail</h2>
+    <button class="google-login-btn" onclick="signInWithGoogle()">Sign in with Google</button>
+  </div>
+  <div id="user-info" style="display:none;">
+    <img id="user-pic" src="" width="50" style="border-radius:50%;" />
+    <p id="user-name"></p>
+    <p id="user-email"></p>
+  </div>
+  <div class="main-content">
+    <div id="money-display">0.00 PKR</div>
+    <div id="ads-container"></div>
+    <button class="withdraw-btn" onclick="document.querySelector('.withdrawal-form').style.display='block'">Withdraw</button>
+    <div class="withdrawal-form">
+      <input type="text" id="account-name" placeholder="Account Name" />
+      <input type="text" id="account-number" placeholder="Account Number" />
+      <select id="payment-method">
+        <option value="" disabled selected>Select Payment Method</option>
+        <option value="JazzCash">JazzCash</option>
+        <option value="Easypaisa">Easypaisa</option>
+      </select>
+      <input type="number" id="amount" placeholder="Amount" />
+      <button onclick="confirmWithdraw()">Confirm Withdrawal</button>
+    </div>
+    <div class="referral-section">
+      <p>Your Referral Link:</p>
+      <input type="text" id="ref-link" readonly />
+      <p>Referral Earnings: <span id="referral-earnings">0.00 PKR</span></p>
+    </div>
+  </div>
+  <div class="message" id="message" style="color:red;"></div>
+  <script src="main.js"></script>
+</body>
+</html>
