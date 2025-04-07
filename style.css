@@ -1,0 +1,90 @@
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.money-display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+.ads-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.ad {
+  margin: 10px;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.withdraw-btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.withdrawal-form {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+.withdrawal-form input,
+.withdrawal-form select {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 300px;
+  box-sizing: border-box;
+}
+.withdrawal-form button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+.message {
+  margin-top: 20px;
+  color: red;
+  text-align: center;
+}
+.payment-banner {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+}
+.payment-banner img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+.payment-banner img:hover {
+  transform: scale(1.1);
+}
+.google-login-btn {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 300px;
+  text-align: center;
+}
+#user-info {
+  text-align: center;
+  margin-top: 20px;
+}

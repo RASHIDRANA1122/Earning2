@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Show System with Gmail Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Login with Gmail</h2>
+  <button class="google-login-btn" onclick="signInWithGoogle()">Sign in with Google</button>
+
+  <div class="user-info" id="user-info" style="display: none;">
+    <img id="user-pic" src="" />
+    <p id="user-name"></p>
+    <p id="user-email"></p>
+  </div>
+
+  <div class="money-display">0.00 PKR</div>
+  <div class="ads-container" id="ads-container"></div>
+  <button class="withdraw-btn">Withdraw</button>
+
+  <div class="withdrawal-form">
+    <input type="text" id="account-name" placeholder="Account Name" />
+    <input type="text" id="account-number" placeholder="Account Number" />
+    <select id="payment-method">
+      <option value="" disabled selected>Select Payment Method</option>
+      <option value="JazzCash">JazzCash</option>
+      <option value="Easypaisa">Easypaisa</option>
+    </select>
+    <div class="payment-banner" id="payment-banner"></div>
+    <input type="number" id="amount" placeholder="Amount" min="5" />
+    <button id="confirm-withdrawal">Confirm Withdrawal</button>
+  </div>
+
+  <div class="message"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
